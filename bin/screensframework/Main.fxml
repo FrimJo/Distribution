@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="FXMLLoader" disable="false" focusTraversable="true" maxHeight="-1.0" maxWidth="-1.0" minHeight="-1.0" minWidth="-1.0" prefHeight="376.0" prefWidth="857.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="screensframework.ScreenController">
+  <children>
+    <ImageView fitHeight="65.0" fitWidth="57.17391510009765" layoutX="325.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../images/stepp_two_rev2.png" />
+      </image>
+    </ImageView>
+    <ImageView disable="false" fitHeight="65.0" fitWidth="57.17391510009765" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../images/stepp_one_rev2.png" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="257.0" fitWidth="257.0" layoutX="31.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../images/table_in.png" />
+      </image>
+    </ImageView>
+    <Label layoutX="82.0" layoutY="37.0" text="Select and copy desired cells.">
+      <font>
+        <Font name="Arial" size="16.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="391.0" layoutY="37.0" text="Calculate distribution.">
+      <labelFor>
+        <Button fx:id="calcButton" disable="true" layoutX="399.0" layoutY="266.0" mnemonicParsing="false" onAction="#calculate" style="-fx-background-radius: 0px;&#10;-fx-font-family: Arial;" text="Calculate" />
+      </labelFor>
+    </Label>
+    <Text layoutX="71.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select and copy desired cells, as">
+      <font>
+        <Font name="Arial Italic" size="11.0" fx:id="x2" />
+      </font>
+    </Text>
+    <Text font="$x2" layoutX="71.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="displayed above." />
+    <Separator layoutX="305.0" layoutY="18.0" orientation="VERTICAL" prefHeight="335.69091796875" />
+    <Text font="$x2" layoutX="353.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the amount to distribute, and" />
+    <Text font="$x2" layoutX="353.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="choose one of the techniques then" />
+    <ImageView fitHeight="65.0" fitWidth="57.17391510009765" layoutX="579.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../images/stepp_thre.png" />
+      </image>
+    </ImageView>
+    <Label font="$x1" layoutX="645.0" layoutY="25.0" text="Paste calculated values">
+      <labelFor>
+        <Button id="calcButton" layoutX="419.0" layoutY="99.0" mnemonicParsing="false" onAction="#calculate" style="" text="Calculate">
+          <stylesheets>
+            <URL value="@style.css" />
+          </stylesheets>
+        </Button>
+      </labelFor>
+    </Label>
+    <Label font="$x1" layoutX="645.0" layoutY="44.0" text="into desired cells.">
+      <labelFor>
+        <Button id="calcButton" layoutX="419.0" layoutY="99.0" mnemonicParsing="false" onAction="#calculate" style="" text="Calculate">
+          <stylesheets>
+            <URL value="@style.css" />
+          </stylesheets>
+        </Button>
+      </labelFor>
+    </Label>
+    <ImageView fitHeight="262.1818198658438" fitWidth="268.0" layoutX="577.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../images/table_out.png" />
+      </image>
+    </ImageView>
+    <Label layoutX="325.0" layoutY="91.0" prefWidth="160.1982421875" text="Total amount to distribute" textOverrun="CLIP">
+      <font>
+        <Font name="Arial Bold" size="13.0" fx:id="x3" />
+      </font>
+    </Label>
+    <TextField fx:id="sumTextField" alignment="CENTER_RIGHT" focusTraversable="true" layoutX="325.0" layoutY="110.0" onAction="#sumEnter" onKeyReleased="#sumTyped" prefWidth="150.4228515625" promptText="Amount" style="-fx-background-radius: 0px;&#10;-fx-focus-color: transparent;&#10;-fx-border-color: #588adb;&#10;-fx-background-color: #ecf7ff;" text="" />
+    <Label font="$x3" layoutX="325.0" layoutY="165.0" text="Distribution technique" />
+    <Label layoutX="325.0" layoutY="215.0" text="Key:">
+      <font>
+        <Font name="Arial" size="13.0" fx:id="x5" />
+      </font>
+    </Label>
+    <Label font="$x5" layoutX="325.0" layoutY="186.0" text="Min value:" />
+    <Label font="$x5" layoutX="466.0" layoutY="185.0" text="kr" />
+    <TextField fx:id="roofTextField" alignment="CENTER_RIGHT" layoutX="392.0" layoutY="183.0" onAction="#roofEnter" onKeyReleased="#roofTyped" prefWidth="70.0" promptText="Amount" style="-fx-background-radius: 0px;&#10;-fx-focus-color: transparent;&#10;-fx-border-color: #588adb;&#10;-fx-background-color: #ecf7ff;" text="" />
+    <TextField fx:id="keyTextField" alignment="CENTER_RIGHT" focusTraversable="true" layoutX="392.0" layoutY="212.0" onAction="#distEnter" onKeyReleased="#keyTyped" prefWidth="35.0" promptText="0.0" style="-fx-background-radius: 0px;&#10;-fx-focus-color: transparent;&#10;-fx-border-color: #588adb;&#10;-fx-background-color: #ecf7ff;" text="" />
+    <fx:reference source="calcButton" />
+    <Separator layoutX="556.0" layoutY="18.0" orientation="VERTICAL" prefHeight="335.69091796875" />
+    <Text font="$x2" layoutX="623.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select and paste calculated values" />
+    <Text font="$x2" layoutX="623.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="into desired cells" />
+    <Label font="$x5" layoutX="480.0" layoutY="115.0" text="kr" />
+    <AnchorPane fx:id="overlay_AnchorPane" disable="false" layoutX="293.0" layoutY="160.0" minHeight="64.13043212890625" onMousePressed="#hideOverlay" prefHeight="84.0" prefWidth="286.0" visible="false">
+      <children>
+        <Pane id="overlay" fx:id="x4" layoutX="-293.0" layoutY="-160.0" opacity="0.3" prefHeight="376.0" prefWidth="857.0" style="-fx-background-color: black;" visible="true">
+          <stylesheets>
+            <URL value="@style.css" />
+          </stylesheets>
+        </Pane>
+        <ImageView id="overlay_image" disable="false" fitHeight="88.08910816731755" fitWidth="287.0" focusTraversable="false" layoutX="0.0" layoutY="0.0" mouseTransparent="true" onMousePressed="#hideOverlay" pickOnBounds="true" preserveRatio="true" visible="true" x="0.0">
+          <image>
+            <Image url="@../images/overlay.jpg" />
+          </image>
+        </ImageView>
+        <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="32.0" prefWidth="251.0" text="Please review the copied values." visible="true">
+          <font>
+            <Font name="Arial" size="14.0" />
+          </font>
+        </Label>
+        <Label id="overlay_label2" font="$x2" labelFor="$x4" layoutX="78.0" layoutY="61.0" mouseTransparent="true" text="(Press anywhere to return)" visible="true" />
+        <Label id="overlay_label1" fx:id="calcStatusLabel" alignment="CENTER" contentDisplay="CENTER" labelFor="$x4" layoutX="14.0" layoutY="10.0" mouseTransparent="true" prefWidth="257.0" text="Calculation complete!" textAlignment="CENTER" visible="true">
+          <font>
+            <Font name="Arial Bold" size="16.0" />
+          </font>
+        </Label>
+      </children>
+    </AnchorPane>
+    <Text font="$x2" layoutX="352.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="press Calculate." />
+  </children>
+  <stylesheets>
+    <URL value="@style.css" />
+  </stylesheets>
+</AnchorPane>

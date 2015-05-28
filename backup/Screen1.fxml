@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Button layoutX="218.0" layoutY="38.0" mnemonicParsing="false" text="..." />
+    <TextField layoutX="16.0" layoutY="38.0" prefWidth="200.0" promptText="Enter path" />
+    <Label layoutX="18.0" layoutY="22.0" text="Open Excel document">
+      <font>
+        <Font name="Arial" size="14.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>
